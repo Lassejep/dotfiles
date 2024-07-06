@@ -11,6 +11,7 @@
     margin: 1px;
     margin-left: 10px;
     margin-right: 10px;
+    padding: 0px;
 }
 
 #waybar {
@@ -24,10 +25,10 @@
 }
 
 tooltip {
-    border-radius: 10px;
     background-color: @base;
+    border-radius: 25px;
     opacity: 0.6;
-    padding: 20px;
+    padding: 0px;
     margin: 0px;
 }
 
