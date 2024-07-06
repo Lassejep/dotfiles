@@ -1,5 +1,4 @@
 {
-    // Workspaces
     "hyprland/workspaces" : {
         "on-click": "activate",
         "active-only": false,
@@ -15,27 +14,7 @@
         }       
     },
 
-    // Taskbar
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 18,
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "ignore-list": [
-           "Kitty",
-        ],
-        "app_ids-mapping": {
-            "firefoxdeveloperedition": "firefox-developer-edition"
-        },
-        "rewrite": {
-            "Firefox Web Browser": "Firefox",
-            "Foot Server": "Terminal"
-        }
-    },
-
-    // Headset Battery
-    "custom/battery": {
+    "custom/headset-battery": {
         "format": " {alt}",
         "tooltip-format": "{}",
         "format-alt": "Battery: {}",
@@ -45,8 +24,6 @@
         "restart-interval": 5,
     },
 
-    
-    // Wallpaper
     "custom/wallpaper": {
         "format": "",
         "on-click": "~/.config/hypr/scripts/wallpaper.sh select",
@@ -54,28 +31,12 @@
         "tooltip": false
     },
 
-    // Waybar Themes
-    "custom/waybarthemes": {
-        "format": "",
-        "on-click": "~/.config/waybar/themeswitcher.sh",
-        "tooltip": false
-    },
-
-    // Keybindings
-    "custom/keybindings": {
-        "format": "",
-        "on-click": "~/.config/hypr/scripts/keybindings.sh",
-        "tooltip": false
-    },
-
-    // Filemanager Launcher
     "custom/filemanager": {
         "format": "",
         "on-click": "kitty -e lf",
         "tooltip": false
     },
 
-    // Rofi Application Launcher
     "custom/appmenu": {
         "format": "󰣇",
         "on-click": "rofi -show drun -replace",
@@ -83,24 +44,12 @@
         "tooltip": false
     },
     
-    // Power Menu
     "custom/exit": {
         "format": "",
         "on-click": "wlogout",
         "tooltip": false
     },
 
-    // Keyboard State
-    "keyboard-state": {
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-
-    // Clock
     "clock": {
         "timezone": "Europe/Copenhagen",
         "format-alt": "{:%Y-%m-%d}",
@@ -120,29 +69,7 @@
         },
     },
 
-    // CPU
-    "cpu": {
-        "format": "/ C {usage}% ",
-        "on-click": "kitty -e htop"
-    },
-
-    // Memory
-    "memory": {
-        "format": "/ M {}% ",
-        "on-click": "kitty -e htop"
-    },
-
-    // Harddisc space used
-    "disk": {
-        "interval": 30,
-        "format": "   {percentage_used}% ",
-        "path": "/",
-        "on-click": "kitty -e htop"
-    }, 
-    
-    // Pulseaudio
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",

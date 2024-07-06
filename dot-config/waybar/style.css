@@ -1,0 +1,101 @@
+@define-color base           #1e242f ;
+@define-color urgent         #b02c36 ;
+@define-color primary_orange #fe9000 ;
+@define-color primary_yellow #ffdd4a ;
+@define-color primary_red    #da1b2b ;
+@define-color primary_blue   #afd2e9 ;
+@define-color primary_blue_2 #6fadd6 ;
+
+* {
+    border-radius: 0px;
+    margin: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#waybar {
+    color: @primary_blue_2;
+    background: transparent;
+    background-color: @base;
+    font-family: "Firacode Nerd Font";
+    font-size: 16px;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+tooltip {
+    border-radius: 10px;
+    background-color: @base;
+    opacity: 0.6;
+    padding: 20px;
+    margin: 0px;
+}
+
+tooltip label {
+    color: @primary_blue;
+}
+
+#custom-appmenu {
+}
+#custom-wallpapers {
+}
+#custom-filemanager {
+}
+
+#window {
+    color: @primary_blue;
+    background-color: @base;
+}
+
+#workspaces {
+    font-weight: bold;
+    color: @primary_blue;
+    background-color: @base;
+}
+
+#workspaces button {
+    color: @primary_blue_2;
+    border-bottom: 3px solid @primary_blue_2;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#workspaces button.active {
+    color: @primary_blue;
+    border-bottom: 3px solid @primary_yellow;
+}
+
+#workspaces button:hover {
+    color: @primary_yellow;
+    background: @base;
+    border: none;
+}
+
+#custom-headset-battery {
+}
+
+#custom-battery.green {
+    color: @primary_yellow;
+}
+
+#custom-battery.yellow {
+    color: @primary_yellow;
+}
+
+#custom-battery.red {
+    color: @primary_red;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+    color: @primary_red;
+}
+
+#clock {
+}
+
+#custom-exit{
+    color: @primary_red;
+}
