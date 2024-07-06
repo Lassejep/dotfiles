@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function ws () {
+    tmux has-session -t $1 2>/dev/null
+
+    if [[ -n "${TMUX}" && $? = 0 ]]; then
+        tmux switch -t $1
+    elif [[ -n "${TMUX}" && $? != 0 ]]; then
+        tmux new-session -s $1 -d && tmux switch -t $1
+        tload $1
+    else
+        tmux new-session -A -s $1
+        tload $1
+    fi
+}
+
+function tload () {
+    if [[ -f "${XDG_CONFIG_HOME}/tmux/templates/${1}.bash" ]]; then
+        ${XDG_CONFIG_HOME}/tmux/templates/${1}.bash
+    fi
+}
