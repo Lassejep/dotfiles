@@ -41,7 +41,7 @@
         "format-alt": "Battery: {}",
         "escape": true,
         "return-type": "json",
-        "exec": "~/git/my_configs/waybar/scripts/headsetbattery.sh",
+        "exec": "~/.config/waybar/scripts/headsetbattery.sh",
         "restart-interval": 5,
     },
 
@@ -49,22 +49,22 @@
     // Wallpaper
     "custom/wallpaper": {
         "format": "",
-        "on-click": "~/git/my_configs/hypr/scripts/wallpaper.sh select",
-        "on-click-right": "~/git/my_configs/hypr/scripts/wallpaper.sh",
+        "on-click": "~/.config/hypr/scripts/wallpaper.sh select",
+        "on-click-right": "~/.config/hypr/scripts/wallpaper.sh",
         "tooltip": false
     },
 
     // Waybar Themes
     "custom/waybarthemes": {
         "format": "",
-        "on-click": "~/git/my_configs/waybar/themeswitcher.sh",
+        "on-click": "~/.config/waybar/themeswitcher.sh",
         "tooltip": false
     },
 
     // Keybindings
     "custom/keybindings": {
         "format": "",
-        "on-click": "~/git/my_configs/hypr/scripts/keybindings.sh",
+        "on-click": "~/.config/hypr/scripts/keybindings.sh",
         "tooltip": false
     },
 
@@ -79,7 +79,7 @@
     "custom/appmenu": {
         "format": "󰣇",
         "on-click": "rofi -show drun -replace",
-        "on-click-right": "~/git/my_configs/hypr/scripts/keybindings.sh",
+        "on-click-right": "~/.config/hypr/scripts/keybindings.sh",
         "tooltip": false
     },
     

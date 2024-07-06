@@ -28,7 +28,7 @@
     "spacing": 0,
 
     // Load Modules
-    "include": ["~/git/my_configs/waybar/modules.json"],
+    "include": ["~/.config/waybar/modules.json"],
 
     // Modules Left
     "modules-left": [

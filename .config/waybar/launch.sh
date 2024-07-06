@@ -14,8 +14,8 @@ fi
 IFS=';' read -ra arrThemes <<< "$themestyle"
 echo ${arrThemes[0]}
 
-if [ ! -f ~/git/my_configs/waybar/themes${arrThemes[1]}/style.css ]; then
+if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
     themestyle="/ml4w;/ml4w/light"
 fi
 
-waybar -c ~/git/my_configs/waybar/themes${arrThemes[0]}/config -s ~/git/my_configs/waybar/themes${arrThemes[1]}/style.css &
+waybar -c ~/.config/waybar/themes${arrThemes[0]}/config -s ~/.config/waybar/themes${arrThemes[1]}/style.css &

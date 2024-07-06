@@ -12,7 +12,7 @@ case $1 in
   ;;
 
   "select")
-    selected=$(ls ~/git/wallpapers | grep "jpg" | rofi -dmenu -replace -config ~/git/my_configs/rofi/config-wallpaper.rasi)
+    selected=$(ls ~/git/wallpapers | grep "jpg" | rofi -dmenu -replace -config ~/.config/rofi/config-wallpaper.rasi)
     if [ ! "$selected" ]; then
       echo "No wallpaper selected"
       exit
@@ -49,7 +49,7 @@ newwall=$(echo $wallpaper | sed "s|$HOME/wallpaper/||g")
 # ----------------------------------------------------- 
 # Reload waybar with new colors
 # -----------------------------------------------------
-~/git/my_configs/waybar/launch.sh
+~/.config/waybar/launch.sh
 
 # ----------------------------------------------------- 
 # Set the new wallpaper
