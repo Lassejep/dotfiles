@@ -65,7 +65,11 @@ tooltip label {
 #workspaces button:hover {
     color: @yellow;
     background: @base;
+    box-shadow: inherit;
+    text-shadow: inherit;
     border: none;
+    transition: none;
+    border-bottom: 3px solid @red;
 }
 
 #custom-headset-battery {}
