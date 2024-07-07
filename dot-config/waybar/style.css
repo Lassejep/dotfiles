@@ -1,10 +1,8 @@
-@define-color base           #1e242f ;
-@define-color urgent         #b02c36 ;
-@define-color primary_orange #fe9000 ;
-@define-color primary_yellow #ffdd4a ;
-@define-color primary_red    #da1b2b ;
-@define-color primary_blue   #afd2e9 ;
-@define-color primary_blue_2 #6fadd6 ;
+@define-color base #1e1e2e;
+@define-color yellow #f9e2af;
+@define-color red #f38ba8;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
 
 * {
     border-radius: 0px;
@@ -15,13 +13,12 @@
 }
 
 #waybar {
-    color: @primary_blue_2;
+    color: @lavender;
     background: transparent;
     background-color: @base;
     font-family: "Firacode Nerd Font";
     font-size: 16px;
     border-radius: 25px;
-    opacity: 0.8;
 }
 
 tooltip {
@@ -33,70 +30,66 @@ tooltip {
 }
 
 tooltip label {
-    color: @primary_blue;
+    color: @blue;
 }
 
-#custom-appmenu {
-}
-#custom-wallpapers {
-}
-#custom-filemanager {
-}
+#custom-appmenu {}
+
+#custom-wallpapers {}
+
+#custom-filemanager {}
 
 #window {
-    color: @primary_blue;
+    color: @blue;
     background-color: @base;
 }
 
 #workspaces {
     font-weight: bold;
-    color: @primary_blue;
+    color: @blue;
     background-color: @base;
 }
 
 #workspaces button {
-    color: @primary_blue_2;
-    border-bottom: 3px solid @primary_blue_2;
+    color: @lavender;
+    border-bottom: 3px solid @lavender;
     margin-left: 0px;
     margin-right: 0px;
 }
 
 #workspaces button.active {
-    color: @primary_blue;
-    border-bottom: 3px solid @primary_yellow;
+    color: @blue;
+    border-bottom: 3px solid @yellow;
 }
 
 #workspaces button:hover {
-    color: @primary_yellow;
+    color: @yellow;
     background: @base;
     border: none;
 }
 
-#custom-headset-battery {
-}
+#custom-headset-battery {}
 
 #custom-battery.green {
-    color: @primary_yellow;
+    color: @yellow;
 }
 
 #custom-battery.yellow {
-    color: @primary_yellow;
+    color: @yellow;
 }
 
 #custom-battery.red {
-    color: @primary_red;
+    color: @red;
 }
 
-#pulseaudio {
-}
+#pulseaudio {}
 
 #pulseaudio.muted {
-    color: @primary_red;
+    color: @red;
 }
 
-#clock {
-}
+#clock {}
 
-#custom-exit{
-    color: @primary_red;
+#custom-exit {
+    color: @red;
 }
