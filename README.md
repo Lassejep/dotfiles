@@ -24,7 +24,6 @@ Config files for my arch hyprland setup
 - [lf]
 - [tpm]
 - [headsetcontrol]
-- [pywal-16-colors]
 - [bibata-cursor-theme]
 
 ## Installation
