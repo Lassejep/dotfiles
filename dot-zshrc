@@ -1,0 +1,73 @@
+# Load colours and then set prompt
+# Prompt preview:
+autoload -U colors && colors
+PS1="%b%{$fg[green]%}%n%{$fg[green]%}%B@%b%{$fg[green]%}%m %{$fg[green]%}%~$:%b%{$reset_color%} "
+
+# ZSH history file
+HISTSIZE=100
+SAVEHIST=100
+HISTFILE=~/.zsh_history
+
+# Keybindings section
+bindkey -e
+bindkey '^[[7~' beginning-of-line                               # Home key
+bindkey '^[[H' beginning-of-line                                # Home key
+if [[ "${terminfo[khome]}" != "" ]]; then
+  bindkey "${terminfo[khome]}" beginning-of-line                # [Home] - Go to beginning of line
+fi
+bindkey '^[[8~' end-of-line                                     # End key
+bindkey '^[[F' end-of-line                                     # End key
+if [[ "${terminfo[kend]}" != "" ]]; then
+  bindkey "${terminfo[kend]}" end-of-line                       # [End] - Go to end of line
+fi
+bindkey '^[[2~' overwrite-mode                                  # Insert key
+bindkey '^[[3~' delete-char                                     # Delete key
+bindkey '^[[C'  forward-char                                    # Right key
+bindkey '^[[D'  backward-char                                   # Left key
+bindkey '^[[5~' history-beginning-search-backward               # Page up key
+bindkey '^[[6~' history-beginning-search-forward                # Page down key
+
+# Navigate words with ctrl+arrow keys
+bindkey '^[Oc' forward-word                                     #
+bindkey '^[Od' backward-word                                    #
+bindkey '^[[1;5D' backward-word                                 #
+bindkey '^[[1;5C' forward-word                                  #
+bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
+bindkey '^[[Z' undo                                             # Shift+tab undo last action
+
+export LD_PRELOAD=""
+export EDITOR="nvim"
+export MANPAGER='nvim +Man!'
+export PATH="$HOME/bin:/usr/lib/ccache/bin/:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin:/usr/bin/core_perl:/usr/games/bin:$PATH"
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export PATH=$PATH:~/lobster/bin
+export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PATH:/home/tinspring/.local/bin"
+
+
+# alias
+alias curl="curl --user-agent 'noleak'"
+alias r="reset"
+alias dd="dd status=progress"
+alias df="df -h"                          # human-readable sizes
+alias free="free -h"
+alias du="du -h"
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+export XDG_CONFIG_HOME=$HOME/.config
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
+source ~/.bash_aliases
+source ~/.bash_scripts
+
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(zoxide init --cmd cd bash)"
