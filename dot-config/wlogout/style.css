@@ -1,23 +1,7 @@
-/*
-          _                         _    
-__      _| | ___   __ _  ___  _   _| |_  
-\ \ /\ / / |/ _ \ / _` |/ _ \| | | | __| 
- \ V  V /| | (_) | (_| | (_) | |_| | |_  
-  \_/\_/ |_|\___/ \__, |\___/ \__,_|\__| 
-                  |___/                  
- 
-by Stephan Raabe (2023) 
------------------------------------------------------ 
-*/
-
-/* -----------------------------------------------------
- * Import Pywal colors 
- * ----------------------------------------------------- */
-@import '../../.cache/wal/colors-wlogout.css';
-
-/* -----------------------------------------------------
- * General 
- * ----------------------------------------------------- */
+@define-color muave #cba6f7;
+@define-color base #1e1e2e;
+@define-color text #cdd6f4;
+@define-color yellow #f9e2af;
 
 * {
     font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -26,11 +10,11 @@ by Stephan Raabe (2023)
 }
 
 window {
-	background-color: rgba(12, 12, 12, 0.1);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 button {
-	color: #FFFFFF;
+	color: @text;
     font-size:20px;
 
     background-repeat: no-repeat;
@@ -38,8 +22,8 @@ button {
 	background-size: 25%;
 
 	border-style: solid;
-	background-color: rgba(12, 12, 12, 0.3);
-	border: 3px solid #FFFFFF;
+	background-color: @base;
+	border: 3px solid @muave;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -47,9 +31,9 @@ button {
 button:focus,
 button:active,
 button:hover {
-    color: @color11;
-	background-color: rgba(12, 12, 12, 0.5);
-	border: 3px solid @color11;
+    color: @muave;
+	background-color: @base;
+	border: 3px solid @yellow;
 }
 
 /* 
