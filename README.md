@@ -30,5 +30,5 @@ Config files for my arch hyprland setup
 ```bash
 git clone https://github.com/lassejep/dotfiles.git
 cd dotfiles
-stow --dotfiles -t ~/ .
+stow --adopt --dotfiles -t ~/ .
 ```
