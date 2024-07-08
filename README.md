@@ -25,10 +25,13 @@ Config files for my arch hyprland setup
 - [tpm]
 - [headsetcontrol]
 - [bibata-cursor-theme]
+- [yt-dlp]
+- [mpv]
+- [unzip]
 
 ## Installation
 ```bash
 git clone https://github.com/lassejep/dotfiles.git
 cd dotfiles
-stow --adopt --dotfiles -t ~/ .
+stow --dotfiles -t ~/ .
 ```
