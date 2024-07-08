@@ -31,6 +31,7 @@ Config files for my arch hyprland setup
 - [libnotify]
 - [man-pages]
 - [man-db]
+- [waypaper]
 
 ## Installation
 ```bash
