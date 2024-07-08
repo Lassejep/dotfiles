@@ -28,6 +28,7 @@ Config files for my arch hyprland setup
 - [yt-dlp]
 - [mpv]
 - [unzip]
+- [libnotify]
 
 ## Installation
 ```bash
