@@ -20,6 +20,7 @@ if pgrep -x "hyprpaper" > /dev/null; then
     hyprctl hyprpaper preload "$1"
     hyprctl hyprpaper wallpaper ",$1"
     cp $1 ~/.cache/wallpaper.png
+    echo "*{ current-image: url('$1', height); }" > ~/.cache/wallpaper.rasi
     notify-send "Hyprpaper" "Wallpaper loaded"
 else
     hyprpaper& &> /dev/null
