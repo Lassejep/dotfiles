@@ -29,6 +29,8 @@ Config files for my arch hyprland setup
 - [mpv]
 - [unzip]
 - [libnotify]
+- [man-pages]
+- [man-db]
 
 ## Installation
 ```bash

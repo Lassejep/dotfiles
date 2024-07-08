@@ -2,11 +2,11 @@
 
 ARGS="--no-video"
 notification(){
-	notify-send "Playing now: " "$@"
+    notify-send "Playing now: " "$@"
 }
 
 menu(){
-	printf "1. Lofi Girl <lofi>\n"
+    printf "1. Lofi Girl <lofi>\n"
     printf "2. Theprimeagen <stream>\n"
     printf "3. DR P1 <radio>\n"
     printf "4. PirateSoftware <stream>\n"
