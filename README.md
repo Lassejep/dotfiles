@@ -12,6 +12,8 @@ Config files for my arch hyprland setup
 - [rofi-wayland]
 - [waybar]
 - [wlogout]
+- [hyprpaper]
+- [hyprlock]
 - [swappy]
 - [grimblast]
 - [zoxide]
