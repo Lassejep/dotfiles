@@ -26,8 +26,7 @@
 
     "custom/wallpaper": {
         "format": "",
-        "on-click": "~/.config/hypr/scripts/wallpaper.sh select",
-        "on-click-right": "~/.config/hypr/scripts/wallpaper.sh",
+        "on-click": "waypaper",
         "tooltip": false
     },
 
