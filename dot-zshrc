@@ -1,5 +1,4 @@
 # Load colours and then set prompt
-# Prompt preview:
 autoload -U colors && colors
 PS1="%b%{$fg[green]%}%n%{$fg[green]%}%B@%b%{$fg[green]%}%m %{$fg[green]%}%~$:%b%{$reset_color%} "
 
@@ -7,6 +6,9 @@ PS1="%b%{$fg[green]%}%n%{$fg[green]%}%B@%b%{$fg[green]%}%m %{$fg[green]%}%~$:%b%
 HISTSIZE=100
 SAVEHIST=100
 HISTFILE=~/.zsh_history
+
+# Autocompletion
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Keybindings section
 bindkey -e
