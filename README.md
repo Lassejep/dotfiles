@@ -42,6 +42,7 @@ Config files for my archlinux hyprland setup
 - [hyprcursor](https://github.com/hyprwm/hyprcursor)
 - [catppuccin-cursors-mocha](https://github.com/catppuccin/cursors)
 - [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete)
+- [htop-vim](https://github.com/KoffeinFlummi/htop-vim)
 
 ## Installation
 ### Install dependencies
@@ -54,7 +55,7 @@ makepkg -si
 ```
 Install dependencies from the arch repositories
 ```bash
-yay -S stow zsh tmux neovim kitty dunst rofi-wayland waybar wlogout hyprpaper hyprlock swappy grimblast zoxide pyenv yarn fzf ripgrep ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common lf headsetcontrol yt-dlp mpv unzip libnotify man-pages man-db waypaper catppuccin-gtk-theme-mocha github-cli pavucontrol hyprcursor catppuccin-cursors-mocha zsh-autocomplete
+yay -S stow zsh tmux neovim kitty dunst rofi-wayland waybar wlogout hyprpaper hyprlock swappy grimblast zoxide pyenv yarn fzf ripgrep ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common lf headsetcontrol yt-dlp mpv unzip libnotify man-pages man-db waypaper catppuccin-gtk-theme-mocha github-cli pavucontrol hyprcursor catppuccin-cursors-mocha zsh-autocomplete htop-vim
 ```
 Install tmux plugin manager (tpm)
 ```bash
