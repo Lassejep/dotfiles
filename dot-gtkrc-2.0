@@ -1,0 +1,3 @@
+gtk-icon-theme-name = "catppuccin-mocha-mauve-standard+default"
+gtk-cursor-theme-name = "Bibata-Modern-Ice"
+gtk-application-prefer-dark-theme = "true"
