@@ -34,6 +34,7 @@ Config files for my arch hyprland setup
 - [man-pages]
 - [man-db]
 - [waypaper]
+- [catppuccin-gtk-theme-mocha]
 
 ## Installation
 ```bash
