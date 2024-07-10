@@ -7,9 +7,8 @@ notification(){
 
 menu(){
     printf "1. Lofi Girl <lofi>\n"
-    printf "2. Theprimeagen <stream>\n"
-    printf "3. DR P1 <radio>\n"
-    printf "4. PirateSoftware <stream>\n"
+    printf "2. DR P1 <radio>\n"
+    printf "3. Youtube Music <energize>\n"
 }
 
 main() {
@@ -23,21 +22,15 @@ main() {
             break
             ;;
         2)
-            notification "Theprimeagen Stream";
-            URL="https://www.twitch.tv/theprimeagen"
-            ADDITIONAL_ARGS=""
-            break
-            ;;
-        3)
             notification "DR P1";
             URL="https://live-icy.gslb01.dr.dk/A/A03H.mp3"
             additional_args=""
             break
             ;;
-        4)
-            notification "PirateSoftware Stream";
-            URL="https://www.twitch.tv/piratesoftware"
-            ADDITIONAL_ARGS=""
+        3)
+            notification "Youtube Music🎶";
+            URL="https://music.youtube.com/watch?v=6JYIGclVQdw&list=RDAMVM6JYIGclVQdw"
+            ADDITIONAL_ARGS="--ytdl-raw-options-append=cookies-from-browser=firefox --ytdl-format=bestaudio"
             break
             ;;
 
