@@ -25,7 +25,7 @@ Config files for my archlinux hyprland setup
 - [ttf-firacode-nerd](https://www.nerdfonts.com/font-downloads)
 - [ttf-nerd-fonts-symbols](https://www.nerdfonts.com/font-downloads)
 - [ttf-nerd-fonts-symbols-common](https://www.nerdfonts.com/font-downloads)
-- [lf](https://github.com/gokcehan/lf)
+- [yazi](https://github.com/sxyazi/yazi?tab=readme-ov-file)
 - [tpm](https://github.com/tmux-plugins/tpm)
 - [headsetcontrol](https://github.com/Sapd/HeadsetControl)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
@@ -56,7 +56,7 @@ makepkg -si
 ```
 Install dependencies from the arch repositories
 ```bash
-yay -S stow zsh tmux neovim kitty dunst rofi-wayland waybar wlogout hyprpaper hyprlock swappy grimblast zoxide pyenv yarn fzf ripgrep ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common lf headsetcontrol yt-dlp mpv unzip libnotify man-pages man-db waypaper catppuccin-gtk-theme-mocha github-cli pavucontrol hyprcursor catppuccin-cursors-mocha zsh-autocomplete htop-vim bat
+yay -S stow zsh tmux neovim kitty dunst rofi-wayland waybar wlogout hyprpaper hyprlock swappy grimblast zoxide pyenv yarn fzf ripgrep ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common yazi headsetcontrol yt-dlp mpv unzip libnotify man-pages man-db waypaper catppuccin-gtk-theme-mocha github-cli pavucontrol hyprcursor catppuccin-cursors-mocha zsh-autocomplete htop-vim bat
 ```
 Install tmux plugin manager (tpm)
 ```bash

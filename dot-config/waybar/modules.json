@@ -32,7 +32,7 @@
 
     "custom/filemanager": {
         "format": "",
-        "on-click": "kitty -e lf",
+        "on-click": "kitty -e yazi",
         "tooltip": false
     },
 
