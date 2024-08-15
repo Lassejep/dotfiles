@@ -8,7 +8,7 @@ notification(){
 menu(){
     printf "1. Lofi Girl <lofi>\n"
     printf "2. DR P1 <radio>\n"
-    printf "3. Youtube Music <energize>\n"
+    printf "3. Youtube Music <favourites>\n"
 }
 
 main() {
@@ -29,8 +29,8 @@ main() {
             ;;
         3)
             notification "Youtube Music🎶";
-            URL="https://music.youtube.com/watch?v=6JYIGclVQdw&list=RDAMVM6JYIGclVQdw"
-            ADDITIONAL_ARGS="--ytdl-raw-options-append=cookies-from-browser=firefox --ytdl-format=bestaudio"
+            URL="https://music.youtube.com/playlist?list=LM"
+            ADDITIONAL_ARGS="--ytdl-raw-options-append=cookies-from-browser=firefox --ytdl-format=bestaudio --shuffle"
             break
             ;;
 
