@@ -32,6 +32,23 @@ return {
 					map("K", vim.lsp.buf.hover, "Hover Documentation")
 					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
+					local function show_diagnostics_popup()
+						local opts = {
+							focusable = false,
+							close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+							border = "rounded",
+							source = "always",
+							prefix = " ",
+						}
+						vim.diagnostic.open_float(nil, opts)
+					end
+
+					-- Show diagnostics popup on CursorHold
+					vim.api.nvim_create_autocmd("CursorHold", {
+						buffer = event.buf,
+						callback = show_diagnostics_popup,
+					})
+
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
 					if client and client.server_capabilities.documentHighlightProvider then
 						vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
