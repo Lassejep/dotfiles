@@ -63,11 +63,47 @@ return {
 						},
 					},
 				},
+				pylsp = {
+					settings = {
+						pylsp = {
+							plugins = {
+								black = { enabled = true },
+								mypy = { enabled = true },
+								pycodestyle = {
+									maxLineLength = 88,
+									ignore = { "E203", "E701" },
+								},
+								autopep8 = {
+									enabled = true,
+									maxLineLength = 88,
+								},
+								isort = {
+									enabled = true,
+									profile = "black",
+								},
+								flake8 = {
+									enabled = true,
+									maxLineLength = 88,
+									ignore = { "E203", "E701" },
+								},
+							},
+						},
+					},
+				},
 			}
 			require("mason").setup()
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua",
+				"lua_ls",
+				"clangd",
+				"clang-format",
+				"cmake",
+				"cmakelang",
+				"pylsp",
+				"black",
+				"prettier",
+				"mypy",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 			require("mason-lspconfig").setup({
