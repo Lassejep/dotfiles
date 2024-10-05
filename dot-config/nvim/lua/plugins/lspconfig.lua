@@ -86,10 +86,7 @@ return {
 							plugins = {
 								black = { enabled = true },
 								mypy = { enabled = true },
-								pycodestyle = {
-									maxLineLength = 88,
-									ignore = { "E203", "E701" },
-								},
+								pycodestyle = { enabled = false },
 								autopep8 = {
 									enabled = true,
 									maxLineLength = 88,
