@@ -98,7 +98,7 @@ return {
 								flake8 = {
 									enabled = true,
 									maxLineLength = 88,
-									ignore = { "E203", "E701" },
+									ignore = { "E203", "E701", "W503" },
 								},
 							},
 						},
