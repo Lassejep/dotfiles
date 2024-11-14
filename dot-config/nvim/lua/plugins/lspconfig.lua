@@ -10,6 +10,7 @@ return {
 			{ "folke/neodev.nvim", opts = {} },
 		},
 		config = function()
+			vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 				callback = function(event)
@@ -30,25 +31,8 @@ return {
 					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 					map("K", vim.lsp.buf.hover, "Hover Documentation")
-					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-
-					local function show_diagnostics_popup()
-						local opts = {
-							focusable = false,
-							close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
-							border = "rounded",
-							source = "always",
-							prefix = " ",
-						}
-						vim.diagnostic.open_float(nil, opts)
-					end
-
-					-- Show diagnostics popup on CursorHold
-					vim.api.nvim_create_autocmd("CursorHold", {
-						buffer = event.buf,
-						callback = show_diagnostics_popup,
-					})
-
+					map("<leader>d", vim.diagnostic.open_float, "Open [D]iagnostic")
+					map("<leader>wd", require("telescope.builtin").diagnostics, "[W]orkspace [D]iagnostics")
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
 					if client and client.server_capabilities.documentHighlightProvider then
 						vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
@@ -103,6 +87,9 @@ return {
 							},
 						},
 					},
+				},
+				clangd = {
+					cmd = { "clangd", "--fallback-style=LLVM" },
 				},
 			}
 			require("mason").setup()
