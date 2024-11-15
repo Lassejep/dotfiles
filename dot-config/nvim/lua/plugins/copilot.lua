@@ -2,33 +2,28 @@ return {
 	-- Copilot integration
 	{
 		"zbirenbaum/copilot.lua",
-		cmd = { "Copilot" },
+		cmd = "Copilot",
+		build = ":Copilot auth",
 		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({
-				filetypes = {
-					markdown = true,
+		opts = {
+			filetypes = {
+				markdown = true,
+				help = true,
+			},
+			suggestion = {
+				enabled = true,
+				auto_trigger = true,
+				keymap = {
+					accept = false,
+					accept_line = "<tab>",
 				},
-				panel = {
-					enabled = true,
-					keymap = {
-						open = "<leader>tab",
-					},
-				},
-				suggestion = {
-					enabled = true,
-					auto_trigger = true,
-					keymap = {
-						accept = false,
-						accept_line = "<tab>",
-					},
-				},
-			})
-		end,
+			},
+		},
 	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "canary",
+		cmd = "CopilotChat",
 		dependencies = {
 			{ "zbirenbaum/copilot.lua" },
 			{ "nvim-lua/plenary.nvim" },
@@ -36,9 +31,10 @@ return {
 		build = "make tiktoken", -- Only on MacOS or Linux
 		opts = {
 			debug = true,
-			context = "buffer",
 		},
-		vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>", { noremap = true, silent = true }),
-		vim.keymap.set("n", "<leader>cg", ":CopilotChatCommitStaged<CR>", { noremap = true, silent = true }),
+		keys = {
+			{ "<leader>cc", "<cmd>CopilotChatToggle<cr>", desc = "Toggle [C]opilot [C]hat", mode = { "n", "v" } },
+			{ "<leader>cg", "<cmd>CopilotChatCommitStaged<cr>", desc = "[C]ommit [G]it staged", mode = { "n", "v" } },
+		},
 	},
 }

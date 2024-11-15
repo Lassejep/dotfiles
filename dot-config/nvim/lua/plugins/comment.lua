@@ -1,4 +1,5 @@
 return {
 	-- Commenting plugin.
-	{ "numToStr/Comment.nvim", opts = {} },
+	"numToStr/Comment.nvim",
+	opts = {},
 }

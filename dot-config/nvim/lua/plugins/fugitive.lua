@@ -1,7 +1,5 @@
 return {
 	-- Git integration
-	{
-		"tpope/vim-fugitive",
-		vim.keymap.set("n", "<leader>gs", vim.cmd.Git),
-	},
+	"tpope/vim-fugitive",
+	keys = { { "<leader>gs", vim.cmd.Git, desc = "[G]it [S]tatus", mode = "n" } },
 }
