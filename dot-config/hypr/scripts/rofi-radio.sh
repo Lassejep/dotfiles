@@ -39,7 +39,7 @@ main() {
 cleanup() {
     pkill -f radio-mpv
     pkill -f radio-player
-    [ -p $PIPE ] && rm -f $PIPE
+    rm -f $PIPE 2>/dev/null
     notify-send "Radio stopped"
 }
 
