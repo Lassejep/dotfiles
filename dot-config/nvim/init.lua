@@ -35,6 +35,7 @@ require("lazy").setup({
 	{ import = "plugins.scrollEOF" },
 	{ import = "plugins.oil" },
 	{ import = "plugins.markdown-preview" },
+	vim.keymap.set({"n", "i"}, "<C-l>", "<cmd>TmuxNavigateLeft<cr>", {noremap=true})
 }, {
 	ui = {
 		icons = vim.g.have_nerd_font and {} or {
