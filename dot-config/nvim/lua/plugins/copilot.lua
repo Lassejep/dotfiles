@@ -33,7 +33,6 @@ return {
 			debug = true,
 			show_help = true,
 			auto_follow_cursor = false,
-			chat_autocomplete = true,
 			prompts = {
 				concise = {
 					system_prompt = "Keep you message concise, and with no or minimal code.",
