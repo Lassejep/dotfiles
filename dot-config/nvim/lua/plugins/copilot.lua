@@ -30,7 +30,7 @@ return {
 		},
 		build = "make tiktoken",
 		opts = {
-			debug = true,
+			chat_autocomplete = false,
 			show_help = true,
 			auto_follow_cursor = false,
 			prompts = {
@@ -39,7 +39,7 @@ return {
 					description = "Ask the chat to keep their message short. This is not supposed to be use on its own, you have to ask a question and add this prompt with /concise",
 				},
 				Commit = {
-					prompt = '> #git:staged\n\nWrite commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters. The message should be formatted something like the following: "Feature: Implemented some feature.". Remember the capitalization',
+					prompt = "> #git:staged\n\nWrite commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters.",
 				},
 			},
 			mappings = {
