@@ -3,6 +3,7 @@
 @define-color red #f38ba8;
 @define-color blue #89b4fa;
 @define-color lavender #b4befe;
+@define-color green #a6e3a1;
 
 * {
     border-radius: 0px;
@@ -33,11 +34,9 @@ tooltip label {
     color: @blue;
 }
 
-#custom-appmenu {}
-
-#custom-wallpapers {}
-
-#custom-filemanager {}
+#custom-appmenu {
+    color: @blue;
+}
 
 #window {
     color: @blue;
@@ -72,27 +71,37 @@ tooltip label {
     border-bottom: 3px solid @red;
 }
 
-#custom-headset-battery {}
+#custom-headset-battery.charging {
+    color: @green;
+}
 
-#custom-battery.green {
+#custom-headset-battery.unavailable {
+    color: @lavender;
+}
+
+#custom-headset-battery.full {
+    color: @blue;
+}
+
+#custom-headset-battery.high {
+    color: @blue;
+}
+
+#custom-headset-battery.medium {
     color: @yellow;
 }
 
-#custom-battery.yellow {
-    color: @yellow;
-}
-
-#custom-battery.red {
+#custom-headset-battery.low {
     color: @red;
 }
 
-#pulseaudio {}
+#custom-headset-battery.empty {
+    color: @red;
+}
 
 #pulseaudio.muted {
     color: @red;
 }
-
-#clock {}
 
 #custom-exit {
     color: @red;

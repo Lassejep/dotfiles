@@ -4,32 +4,32 @@ battery_level=$(headsetcontrol -b | grep Level | cut -d' ' -f2)
 battery_status=$(headsetcontrol -b | grep Status | cut -d' ' -f2)
 
 if [ "$battery_status" == "BATTERY_CHARGING" ]; then
-    css_class="green"
-    icon=" "
+    css_class="charging"
+    icon=" "
 
 elif [ "$battery_status" == "BATTERY_UNAVAILABLE" ]; then
-    css_class="green"
+    css_class="unavailable"
     icon=" "
     battery_level="N/A"
 
 elif [ "$battery_level" == "100%" ]; then
-    css_class="green"
+    css_class="full"
     icon=" "
 
 elif [ "$battery_level" == "75%" ]; then
-    css_class="green"
+    css_class="high"
     icon=" "
 
 elif [ "$battery_level" == "50%" ]; then
-    css_class="yellow"
+    css_class="medium"
     icon=" "
 
 elif [ "$battery_level" == "25%" ]; then
-    css_class="red"
+    css_class="low"
     icon=" "
 
 else 
-    css_class="red"
+    css_class="unavailable"
     icon=" "
 fi
 
