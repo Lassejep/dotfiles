@@ -73,27 +73,28 @@ return {
 			clangd = { cmd = { "clangd", "--fallback-style=LLVM" } },
 		}
 		require("mason").setup()
-		local ensure_installed = vim.tbl_keys(servers or {})
-		vim.list_extend(ensure_installed, {
-			"stylua",
-			"lua_ls",
-			"clangd",
-			"clang-format",
-			"cmake",
-			"cmakelang",
-			"pylsp",
-			"black",
-			"prettier",
-			"mypy",
-		})
-		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 		require("mason-lspconfig").setup({
+			automatic_installation = true,
+			ensure_installed = {
+				"lua_ls",
+				clangd = { cmd = { "clangd", "--fallback-style=LLVM" } },
+				"pylsp",
+			},
 			handlers = {
 				function(server_name)
 					local server = servers[server_name] or {}
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 					require("lspconfig")[server_name].setup(server)
 				end,
+			},
+		})
+		require("mason-tool-installer").setup({
+			ensure_installed = {
+				"stylua",
+				"clang-format",
+				"black",
+				"prettier",
+				"mypy",
 			},
 		})
 	end,
