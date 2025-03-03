@@ -20,4 +20,4 @@ alias tks="tmux kill-session -t"
 alias tka="tmux kill-session -a"
 alias trw="tmux rename-window -t"
 
-alias ctest="ctest --output-on-failure"
+alias ctest="ctest --output-on-failure --timeout 15"
