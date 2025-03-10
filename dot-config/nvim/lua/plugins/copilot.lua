@@ -12,7 +12,7 @@ return {
 				adapter = "deepseek",
 				keymaps = {
 					close = {
-						modes = { n = "q", i = "q" },
+						modes = { n = "q", i = "<C-c>" },
 					},
 				},
 				show_token_count = true,
