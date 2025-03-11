@@ -1,10 +1,11 @@
 return {
-	-- Copilot integration
+	-- AI integration
 	"olimorris/codecompanion.nvim",
 	config = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
+		"nvim-telescope/telescope.nvim",
 	},
 	opts = {
 		strategies = {
