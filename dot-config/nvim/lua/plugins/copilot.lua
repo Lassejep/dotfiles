@@ -10,6 +10,7 @@ return {
 	opts = {
 		strategies = {
 			chat = {
+				selection_strategy = "telescope",
 				adapter = "deepseek",
 				keymaps = {
 					close = {

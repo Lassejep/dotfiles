@@ -17,9 +17,12 @@ return {
 	},
 	opts = {
 		extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown() } },
-		pcall(require("telescope").load_extension, "fzf"),
-		pcall(require("telescope").load_extension, "ui-select"),
 	},
+	config = function(_, opts)
+		require("telescope").setup(opts)
+		require("telescope").load_extension("fzf")
+		require("telescope").load_extension("ui-select")
+	end,
 	keys = {
 		{ "<leader>pf", "<cmd>Telescope find_files<cr>", desc = "Telescope [P]roject [F]iles" },
 		{ "<leader>pw", "<cmd>Telescope grep_string<cr>", desc = "Telescope [P]roject [W]ord" },
