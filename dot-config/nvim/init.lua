@@ -26,7 +26,7 @@ require("lazy").setup({
 	{ import = "plugins.catppuccin" },
 	{ import = "plugins.mini" },
 	{ import = "plugins.treesitter" },
-	{ import = "plugins.copilot" },
+	{ import = "plugins.codecompanion" },
 	{ import = "plugins.fugitive" },
 	{ import = "plugins.harpoon" },
 	{ import = "plugins.undotree" },
