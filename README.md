@@ -3,6 +3,7 @@ Config files for my archlinux hyprland setup
 
 ## Dependencies
 - [archlinux](https://archlinux.org/)
+- [git](https://git-scm.com/)
 - [stow](https://www.gnu.org/software/stow/)
 - [kitty](https://sw.kovidgoyal.net/kitty/)
 - [hyprland](https://hyprland.org/)
@@ -45,16 +46,17 @@ Config files for my archlinux hyprland setup
 ### Install yay
 ```bash
 sudo pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
+mkdir -p ~/git
+git clone https://aur.archlinux.org/yay.git ~/git/
+cd ~/git/yay
 makepkg -si
 ```
 
 ### Clone and install dotfiles
 Install dependencies from the arch repositories
 ```bash
-git clone https://github.com/lassejep/dotfiles.git
-cd dotfiles
+git clone https://github.com/lassejep/dotfiles.git ~/git/
+cd ~/git/dotfiles
 yay -S --needed - < packages.txt
 stow --dotfiles -t ~/ .
 ```
