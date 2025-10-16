@@ -46,9 +46,10 @@ makepkg -si
 ### Clone and install dotfiles
 Install dependencies from the arch repositories
 ```bash
-git clone https://github.com/lassejep/dotfiles.git ~/git/
-cd ~/git/dotfiles
+mkdir -p ~/configs
+git clone https://github.com/lassejep/dotfiles.git ~/configs/
+cd ~/configs/dotfiles
 yay -S --needed - < packages.txt
-stow --dotfiles -t ~/ .
+stow --dotfiles -t $XDG_CONFIG_HOME .
 ```
 If you run into any issues with the stow command, you can manually delete the conflicting files from your system and then run the stow command again.
