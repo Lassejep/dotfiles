@@ -25,8 +25,6 @@ Config files for my archlinux hyprland setup
 - [ttf-nerd-fonts-symbols-common](https://www.nerdfonts.com/font-downloads)
 - [yazi](https://github.com/sxyazi/yazi?tab=readme-ov-file)
 - [headsetcontrol](https://github.com/Sapd/HeadsetControl)
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-- [mpv](https://mpv.io/)
 - [unzip](https://man.archlinux.org/man/unzip.1.en)
 - [libnotify](https://github.com/GNOME/libnotify)
 - [man-pages](https://linux.die.net/man/)
