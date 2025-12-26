@@ -25,6 +25,12 @@
         "restart-interval": 5,
     },
 
+    "custom/bluetooth": {
+        "format": "󰂯",
+        "on-click": "kitty -e bluetui",
+        "tooltip": false
+    },
+
     "custom/wallpaper": {
         "format": "",
         "on-click": "waypaper",

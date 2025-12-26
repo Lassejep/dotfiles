@@ -21,6 +21,7 @@
     "modules-right": [
         "custom/headset-battery",
         "pulseaudio",
+        "custom/bluetooth",
         "clock",
         "custom/exit",
     ],
