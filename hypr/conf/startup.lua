@@ -1,0 +1,8 @@
+hl.on("hyprland.start", function()
+	hl.exec_cmd("dunst")
+	hl.exec_cmd("waypaper --restore")
+	hl.exec_cmd("hyprctl setcursor 'Catppuccin Mocha Light 24'")
+	hl.exec_cmd("~/.config/hypr/scripts/gtk.sh")
+	hl.exec_cmd("hypridle")
+	hl.exec_cmd("waybar")
+end)
