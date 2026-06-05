@@ -13,19 +13,16 @@
     padding: 0px;
 }
 
-#waybar {
+window#waybar {
+    border-radius: 25px;
     color: @lavender;
-    background: transparent;
-    background-color: @base;
+    background-color: alpha(@base, 1.0);
     font-family: "Firacode Nerd Font";
     font-size: 16px;
-    border-radius: 25px;
 }
 
 tooltip {
     background-color: @base;
-    border-radius: 25px;
-    opacity: 0.6;
     padding: 0px;
     margin: 0px;
 }
@@ -36,11 +33,6 @@ tooltip label {
 
 #custom-appmenu {
     color: @blue;
-}
-
-#window {
-    color: @blue;
-    background-color: @base;
 }
 
 #workspaces {
