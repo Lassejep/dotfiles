@@ -74,7 +74,21 @@ hl.bind(mainMod .. "SHIFT + 0", hl.dsp.window.move({ workspace = 10, follow = fa
 hl.bind(mainMod .. "V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. "P", hl.dsp.window.pin({ action = "toggle" }))
 hl.bind(mainMod .. "F", hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind(mainMod .. "SHIFT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
+
+local function toggle_client_fullscreen()
+	local window = hl.get_active_window()
+	if window == nil then
+		return
+	end
+	if window.fullscreen_client == 2 and window.fullscreen ~= 2 then
+		hl.dispatch(hl.dsp.window.fullscreen_state({ internal = -1, client = 0 }))
+		hl.notification.create({ text = "toggle client fullscreen off", duration = 2000 })
+	else
+		hl.dispatch(hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
+		hl.notification.create({ text = "toggle client fullscreen on", duration = 2000 })
+	end
+end
+hl.bind(mainMod .. "SHIFT + F", toggle_client_fullscreen)
 hl.bind(mainMod .. "mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. "mouse:273", hl.dsp.window.resize())
 
