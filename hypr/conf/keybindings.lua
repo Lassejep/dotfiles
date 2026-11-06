@@ -16,7 +16,6 @@ hl.bind(mainMod .. "SHIFT + P", hl.dsp.exec_cmd("~/.config/player/player.sh"))
 
 -- Change themes and wallpaper
 hl.bind(mainMod .. "SHIFT + B", hl.dsp.exec_cmd("~/.config/waybar/launch.sh"))
-hl.bind(mainMod .. "W", hl.dsp.exec_cmd("waypaper --random"))
 hl.bind(mainMod .. "SHIFT + W", hl.dsp.exec_cmd("waypaper"))
 
 -- Screenshot binds
